@@ -1,0 +1,235 @@
+body {
+    background-color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal-content {
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 7px 0px #fff;
+}
+
+.install-prompt {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.install-prompt.hidden {
+    display: none;
+}
+
+#installBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn-close {
+    color: #fff;
+    background-color: #fff;
+}
+
+.stationName {
+    height: auto;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card-img-top {
+    transform: rotate(25deg) translate(18%, -2%);
+    position: absolute;
+    right: 0;
+    top: 25%;
+    z-index: 0;
+}
+
+.audio-controls button {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.volume-control {
+    width: 100px;
+}
+
+.search-input {
+    position: relative;
+}
+
+.search-input input {
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .card {
+        transition: transform 0.2s;
+        width: 100%;
+        height: 190px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        transition: transform 0.2s;
+        width: 335px;
+        height: 190px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.modal-content {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body img {
+    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.modal-body h5,
+.modal-body p {
+    margin: 10px 0;
+}
+
+.modal-footer {
+    border-top: none;
+    justify-content: center;
+}
+
+.player-controls button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.player-controls button i {
+    transition: transform 0.2s;
+}
+
+.player-controls button:hover i {
+    transform: scale(1.2);
+}
+
+.volume-slider {
+    width: 100px;
+    margin-left: 10px;
+}
+
+.search-icon {
+    position: absolute;
+    z-index: 1;
+    top: 32%;
+    left: 2%;
+}
+
+.cedarville-cursive-regular {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Fixed Bottom Player Styles */
+#fixedPlayer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#fixedPlayerStationInfo {
+    color: #ffffff;
+    margin-right: auto;
+    text-align: left;
+}
+
+#fixedPlayerControls {
+    display: flex;
+    align-items: center;
+}
+
+#fixedPlayerControls button {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+    margin: 0 5px;
+    transition: transform 0.2s;
+}
+
+#fixedPlayerControls button:hover {
+    transform: scale(1.2);
+}
+
+#fixedPlayerControls button i {
+    transition: transform 0.2s;
+}
