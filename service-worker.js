@@ -35,27 +35,27 @@ self.addEventListener('activate', (event) => {
 
 // Serve cached resources or fetch from network
 self.addEventListener('fetch', (event) => {
+    const { request } = event;
+    // Redirect to HTTPS if served over HTTP
+    if (request.url.startsWith('http://')) {
+        event.respondWith(
+            Response.redirect(request.url.replace(/^http:/, 'https:'), 301)
+        );
+        return;
+    }
+
+    // Serve cached resources or fetch from network
     event.respondWith(
-        caches.match(event.request).then((cachedResponse) => {
+        caches.match(request).then((cachedResponse) => {
             if (cachedResponse) {
                 return cachedResponse;
             }
 
             // Fallback to network if not cached
-            return fetch(event.request).catch(() => {
+            return fetch(request).catch(() => {
                 // Offline fallback page
                 return caches.match('/offline.html');
             });
         })
     );
-});
-
-// Redirect to HTTPS if served over HTTP
-self.addEventListener('fetch', (event) => {
-    const { url } = event.request;
-    if (url.startsWith('http://')) {
-        event.respondWith(
-            Response.redirect(url.replace(/^http:/, 'https:'), 301)
-        );
-    }
 });
