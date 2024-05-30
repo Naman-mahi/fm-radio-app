@@ -1,0 +1,27 @@
+Folder PATH listing
+Volume serial number is B0FC-A63F
+C:.
+|   index.html
+|   manifest.json
+|   output.txt
+|   README.md
+|   service-worker.js
+|   
++---css
+|       style.css
+|       
++---icons
+|       android-chrome-192x192.png
+|       android-chrome-512x512.png
+|       apple-touch-icon.png
+|       browserconfig.xml
+|       favicon-16x16.png
+|       favicon-32x32.png
+|       favicon.ico
+|       mstile-150x150.png
+|       safari-pinned-tab.svg
+|       site.webmanifest
+|       
+\---js
+        main.js
+        
